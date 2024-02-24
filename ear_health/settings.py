@@ -29,7 +29,8 @@ DEBUG = True
 ALLOWED_HOSTS = [
     "127.0.0.1",
     "python.srishticampus.tech",
-    "10.0.2.2"
+    "10.0.2.2",
+    "202.191.65.67"
 ]
 
 

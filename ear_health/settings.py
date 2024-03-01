@@ -30,7 +30,8 @@ ALLOWED_HOSTS = [
     "127.0.0.1",
     "python.srishticampus.tech",
     "10.0.2.2",
-    "202.191.65.67"
+    "202.191.65.67",
+    "python.sicsglobal.com",
 ]
 
 
@@ -153,4 +154,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 APPEND_SLASH=False
+
 

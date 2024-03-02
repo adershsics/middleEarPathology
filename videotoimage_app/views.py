@@ -132,7 +132,13 @@ def upload_video(request):
                     max_accuracy = predicted_accuracy
                     image_with_highest_accuracy = image.copy()
                     best_prediction = predicted_class_label
-        
+        # Check if any label count exceeds 20
+        if any(count > 20 for count in class_counters.values()):
+            response_data = {
+                'status': 'error',
+                'message': 'Label count exceeds 20. Video processing stopped.'
+            }
+            return JsonResponse(response_data, status=400)
         # Get the final prediction and image with overlay
         final_prediction = max(class_counters, key=class_counters.get)
         print(final_prediction)
